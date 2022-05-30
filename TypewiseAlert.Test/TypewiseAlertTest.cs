@@ -23,7 +23,7 @@ namespace TypewiseAlert.Test
       
       Assert.True(TypewiseAlert.ClassifyTemperatureBreach(CoolingType.MED_ACTIVE_COOLING, -3) == TypewiseAlert.BreachType.TOO_LOW);
       Assert.True(TypewiseAlert.ClassifyTemperatureBreach(CoolingType.MED_ACTIVE_COOLING, 25) == TypewiseAlert.BreachType.NORMAL);
-      Assert.True(TypewiseAlert.ClassifyTemperatureBreach(CoolingType.MED_ACTIVE_COOLING, 40) == TypewiseAlert.BreachType.TOO_HIGH);
+      Assert.True(TypewiseAlert.ClassifyTemperatureBreach(CoolingType.MED_ACTIVE_COOLING, 62) == TypewiseAlert.BreachType.TOO_HIGH);
      
       Assert.True(TypewiseAlert.ClassifyTemperatureBreach(CoolingType.HI_ACTIVE_COOLING, -2) == TypewiseAlert.BreachType.TOO_LOW);
       Assert.True(TypewiseAlert.ClassifyTemperatureBreach(CoolingType.HI_ACTIVE_COOLING, 24) == TypewiseAlert.BreachType.NORMAL);
