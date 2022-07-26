@@ -25,10 +25,6 @@ namespace TypewiseAlert
       public void Send()
       {
         sent = _alertTarget.Send(_breachType);
-        if (sent)
-        {
-          sent = false; //Once sent, reset the values
-        }
       }
     
   }
