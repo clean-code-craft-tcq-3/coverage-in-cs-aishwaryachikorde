@@ -12,6 +12,9 @@ namespace TypewiseAlert.Test
       Assert.True(TypewiseAlert.InferBreach(15, 30, 50) == TypewiseAlert.BreachType.TOO_LOW);
       Assert.True(TypewiseAlert.InferBreach(36, 30, 50) == TypewiseAlert.BreachType.NORMAL);
       Assert.True(TypewiseAlert.InferBreach(53, 30, 50) == TypewiseAlert.BreachType.TOO_HIGH);
+      Assert.True(TypewiseAlert.InferBreach(30, 30, 50) == TypewiseAlert.BreachType.NORMAL);
+      Assert.True(TypewiseAlert.InferBreach(50, 30, 50) == TypewiseAlert.BreachType.TOO_HIGH);
+      Assert.True(TypewiseAlert.InferBreach(30, 30, 30) == TypewiseAlert.BreachType.NORMAL);
      }
 
     [Fact]
