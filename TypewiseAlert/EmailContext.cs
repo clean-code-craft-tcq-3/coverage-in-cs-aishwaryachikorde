@@ -24,10 +24,6 @@ namespace TypewiseAlert
     public void Send()
     {
       sent = _breachAlerter.SendEmail(_recepient);
-      if (sent)
-       {
-          sent = false; //Once sent, reset the values
-       }
-    }
+     }
   }
 }
