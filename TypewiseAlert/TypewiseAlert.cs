@@ -32,7 +32,7 @@ namespace TypewiseAlert
       MED_ACTIVE_COOLING
     };
 
-    static Dictionary<CoolingType, CoolingLimits> CoolingOptions = new Dictionary<CoolingType, CoolingLimits>
+    private static Dictionary<CoolingType, CoolingLimits> CoolingOptions = new Dictionary<CoolingType, CoolingLimits>
         {
 
             {CoolingType.PASSIVE_COOLING,new CoolingLimits{LowerLimit= 0,UpperLimit=35 } },
@@ -60,14 +60,15 @@ namespace TypewiseAlert
       public string brand;
     }
 
-    static Dictionary<AlertTarget, IBreachAlert> alertTargets = new Dictionary<AlertTarget, IBreachAlert>
+    private static Dictionary<AlertTarget, IBreachAlert> alertTargets = new Dictionary<AlertTarget, IBreachAlert>
         {
 
             {AlertTarget.TO_CONTROLLER, new ControllerAsTarget() },
             {AlertTarget.TO_EMAIL, new EmailAsTarget() },
 
         };
-    public static bool CheckAndAlert(AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC)
+    
+    private static bool CheckAndAlert(AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC)
     {
 
       BreachType breachType = ClassifyTemperatureBreach(batteryChar.coolingType, temperatureInC);
